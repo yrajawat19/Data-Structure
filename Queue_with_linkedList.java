@@ -55,7 +55,7 @@ public class Queue_with_linkedList {
         list.append(8);
         list.append(7);
         list.append(6);
-        list.append(798);
+        list.append(10);
         list.show_list();
         list.delete();
         list.show_list();
