@@ -70,13 +70,13 @@ public class Get_the_Nth_Node {
 
     public void print_list()
     {
-      Node n = head;
-      while(n!=null)
-      {
-          System.out.print(n.data+" ");
-          n = n.next;
-      }
-      System.out.println();
+        Node n = head;
+        while(n!=null)
+        {
+            System.out.print(n.data+" ");
+            n = n.next;
+        }
+        System.out.println();
     }
 
     public void GetNth(int index)
