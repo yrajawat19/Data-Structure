@@ -105,7 +105,7 @@ class AVLTree
 public class AVLTree_Insertion {
     public static void main(String[] args) {
         AVLTree tree = new AVLTree();
-        int keys[] = {23, 56, 75, 45, 5, 3, 754, 35, 24, 6, 45, 35, 324, 6, 35, 35, 22, 324, 46, 564, 34, 324, 6, 546, 67,};
+        int keys[] = {23, 56, 75, 45, 5, 3, 324, 46, 564, 34, 324, 6, 546, 67,};
         for (int i : keys)
             tree.insert(i);
 
