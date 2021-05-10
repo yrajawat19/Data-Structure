@@ -1,70 +1,44 @@
+package Tree;
 public class MinHeap {
-    private int[] Heap;
-    private int size;
-    private int maxsize;
+    int maxsize;
+    int size;
+    int[] Heap;
     private static final int FRONT = 1;
-    public MinHeap(int maxsize)
+    MinHeap(int maxsize)
     {
         this.maxsize = maxsize;
         this.size = 0;
-        Heap = new int[this.maxsize +1];
+        Heap = new int[this.maxsize+1];
         Heap[0] = Integer.MIN_VALUE;
     }
-
     private int parent(int pos)
     {
         return pos/2;
     }
-
-    private int leftChild(int pos)
-    {
-        return (2*pos);
-    }
-
     private int rightChild(int pos)
     {
         return (2*pos)+1;
     }
-
-    private boolean isLeaf(int pos)
+    private int leftChild(int pos)
     {
-        if(pos>=(size/2) && pos <= size)
-        {
-            return true;
-        }
-
+        return (2*pos);
+    }
+    private boolean isleafNode(int pos)
+    {
+        if(pos>=size/2 && pos<=size)
+                return true;
         return false;
     }
-    private void swap(int a, int b)
+    private void swap(int fpos,int spos)
     {
-        int temp = Heap[a];
-        Heap[a] = Heap[b];
-        Heap[b] = temp;
+        int temp = Heap[fpos];
+        Heap[fpos] = Heap[spos];
+        Heap[spos] = temp;
     }
-    private void minHeapify(int pos)
-    {
-        if(!isLeaf(pos))
-        {
-            if(Heap[pos] >Heap[leftChild(pos)] || Heap[pos]>Heap[rightChild(pos)])
-            {
-                if(Heap[leftChild(pos)]<Heap[rightChild(pos)])
-                {
-                    swap(pos,leftChild(pos));
-                    minHeapify(leftChild(pos));
-                }
-                else {
-                    swap(pos,rightChild(pos));
-                    minHeapify(rightChild(pos));
-                }
-            }
-        }
-    }
-    public void insert(int element)
+    private void insert(int element)
     {
         if(size>=maxsize)
-        {
             return;
-        }
         Heap[++size] = element;
         int current = size;
         while(Heap[current]<Heap[parent(current)])
@@ -73,29 +47,42 @@ public class MinHeap {
             current = parent(current);
         }
     }
-
+    private void minHeapify(int pos)
+    {
+        if(isleafNode(pos))
+            return;
+        if(Heap[pos]>Heap[leftChild(pos)] || Heap[pos]>Heap[rightChild(pos)])
+        {
+            if(Heap[leftChild(pos)]<Heap[rightChild(pos)])
+            {
+                swap(pos,leftChild(pos));
+                minHeapify(leftChild(pos));
+            }
+            else
+            {
+                swap(pos,rightChild(pos));
+                minHeapify(rightChild(pos));
+            }
+        }
+    }
+    public void minHeap()
+    {
+        for(int i=(size/2);i>=1;i--)
+        {
+            minHeapify(i);
+        }
+    }
     public void print()
     {
-        for(int i=1;i<=size/2;i++)
+        for(int i=1;i<(size/2);i++)
         {
-            System.out.print("PARENT :"+Heap[i]);
-            System.out.print("LEFT CHILD :"+Heap[2*i]);
-            System.out.print("RIGHT CHILD :"+Heap[2*i+1]);
+            System.out.print(" PARENT : "+Heap[i]+" LEFT CHILD : "+Heap[leftChild(i)]+" RIGHT CHILD "+Heap[rightChild(i)]);
             System.out.println();
         }
     }
-
-    public void minHeap()
+    int extractMin()
     {
-        for(int pos=(size/2);pos>=1;pos--)
-        {
-            minHeapify(pos);
-        }
-    }
-
-    public int extractMin()
-    {
-        int popped = Heap[FRONT];
+        int popped = Heap[1];
         Heap[FRONT] = Heap[size--];
         minHeapify(FRONT);
         return popped;
