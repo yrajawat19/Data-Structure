@@ -1,66 +1,65 @@
+/* Java Program to find all possible paths in Graph from given source to given destination . */
 package Graph;
 import java.util.*;
-import java.io.*;
+
 class DirectedGraph
 {
-    int V;
-    LinkedList<Integer> adj[];
-    DirectedGraph(int v)
+    int V; // No of vertices in graph
+    ArrayList<Integer> adj[]; // Representation of graph as Adjacency list .
+    DirectedGraph(int v) // Constructor to assign values to V and adj[] .
     {
         V = v;
-        adj = new LinkedList[V];
+        adj = new ArrayList[V];
         for(int i=0;i<V;i++)
-            adj[i] = new LinkedList();
+            adj[i] = new ArrayList<>();
     }
-    void addEdge(int u, int v)
+    void addEdge(int u, int v) // Method to add Edge between vertices .
     {
         adj[u].add(v);
     }
-
-    void printAllPath(int src, int dest)
-    {
-        boolean visited[] = new boolean[V];
+    // Method to print all possible paths in Graph for given source to destination .
+    public void printAllPath(int source, int destination) {
+        boolean[] isVisited = new boolean[V];
         ArrayList<Integer> pathList = new ArrayList<>();
-        pathList.add(src);
-        printAllPathUtil(src,dest,visited,pathList);
-
+        pathList.add(source);
+        printAllPathUtil(source,destination,isVisited,pathList);
     }
-
-    private void printAllPathUtil(int src, int dest, boolean[] visited, ArrayList<Integer> pathList) {
-        if(src == dest) {
+    // This method uses DFS Algorithm to find all possible paths .
+    private void printAllPathUtil(Integer source, Integer destination, boolean[] isVisited, ArrayList<Integer> pathList) {
+        if(source.equals(destination)) {
             System.out.println(pathList);
             return;
         }
-        visited[src] = true;
-
-        for(int i:adj[src])
+        isVisited[source] = true;
+        for(Integer n : adj[source])
         {
-            if(!visited[i])
-            {
-                pathList.add(i);
-                printAllPathUtil(i,dest,visited,pathList);
-                pathList.remove(i);
-            }
-        }
-        visited[src] = false;
-    }
+           if(!isVisited[n])
+           {
+               pathList.add(n);
+               printAllPathUtil(n,destination,isVisited,pathList);
+               pathList.remove(n);
+           }
+       }
+       isVisited[source] = false;
 
+    }
 }
 public class find_all_path_using_DFS {
     public static void main(String[] args) {
-        DirectedGraph g = new DirectedGraph(4);
-        g.addEdge(0, 1);
-        g.addEdge(0, 2);
-        g.addEdge(0, 3);
-        g.addEdge(2, 0);
-        g.addEdge(2, 1);
-        g.addEdge(1, 3);
+        DirectedGraph g = new DirectedGraph(5);
+        g.addEdge(0,1);
+        g.addEdge(0,2);
+        g.addEdge(0,4);
+        g.addEdge(1,3);
+        g.addEdge(1,4);
+        g.addEdge(2,4);
+        g.addEdge(3,2);
 
         // arbitrary source
-        int s = 2;
+        int s = 0;
 
         // arbitrary destination
-        int d = 3;
+        int d = 4;
 
         System.out.println(
                 "Following are all different paths from "
