@@ -37,8 +37,5 @@ public class SelectionSort {
         System.out.println("Array after selection sort : ");
         arr = selectionsort(arr);
         printArray(arr);
-
-
-
     }
 }

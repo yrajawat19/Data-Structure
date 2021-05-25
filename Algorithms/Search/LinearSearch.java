@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Search;
 import java.util.*;
 public class LinearSearch {
     public static boolean search(int[] arr,int k)
