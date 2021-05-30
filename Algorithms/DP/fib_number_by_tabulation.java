@@ -1,8 +1,8 @@
 package Algorithms.DP;
 import java.util.*;
 public class fib_number_by_tabulation {
-    static int fib(int n) {
-        int[] F = new int[n+1];
+    static Integer fib(int n) {
+        Integer[] F = new Integer[n+1];
         F[0] = 0;
         F[1] = 1;
         for(int i=2;i<=n;i++)
@@ -12,7 +12,7 @@ public class fib_number_by_tabulation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number to print its fibonacci value : ");
-        int n = sc.nextInt();
+        Integer n = sc.nextInt();
         System.out.println("Fibonacci value of number "+n+" is "+fib(n));
     }
 }

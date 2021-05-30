@@ -1,4 +1,4 @@
-package Algorithms.DP;
+package Arrays;
 
 public class leftshift {
     public static void LeftShift(int[] arr, int k)

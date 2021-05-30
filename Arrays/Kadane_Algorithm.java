@@ -1,3 +1,5 @@
+package Arrays;
+
 public class Kadane_Algorithm
 {
     public static void main(String[] args) {
