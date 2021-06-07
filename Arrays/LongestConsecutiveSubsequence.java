@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.HashSet;
 
-public class LongestCommonSubsequence {
+public class LongestConsecutiveSubsequence {
     static int lcs(int[] arr)
     {
         HashSet<Integer> set = new HashSet<>();
@@ -31,6 +31,6 @@ public class LongestCommonSubsequence {
         int[] arr = {1,9,3,10,4,20,2};
         System.out.println("Input Array : ");
         print(arr);
-        System.out.println("length of Longest common subsequence is "+lcs(arr));
+        System.out.println("length of Longest consecutive subsequence is "+lcs(arr));
     }
 }
