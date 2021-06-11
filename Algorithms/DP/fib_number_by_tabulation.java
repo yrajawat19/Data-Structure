@@ -1,10 +1,11 @@
 package Algorithms.DP;
+import java.math.BigInteger;
 import java.util.*;
 public class fib_number_by_tabulation {
-    static Integer fib(int n) {
-        Integer[] F = new Integer[n+1];
-        F[0] = 0;
-        F[1] = 1;
+    static Double fib(int n) {
+        Double[] F = new Double[n+1];
+        F[0] = (double)0;
+        F[1] = (double)1;
         for(int i=2;i<=n;i++)
             F[i] = F[i-1]+F[i-2];
         return F[n];

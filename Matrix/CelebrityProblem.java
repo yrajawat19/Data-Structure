@@ -1,4 +1,4 @@
-package Algorithms.StandardProblems;
+package Matrix;
 /* ******************* PROBLEM STATEMENT ************************
  In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes,
   (s)he doesn’t know anyone in the party. We can only ask questions like “does A know B? “.
@@ -19,10 +19,10 @@ Algorithm:
 import java.util.*;
 public class CelebrityProblem {
     // Person 2 is celebrity .
-    static int[][] matrix = { { 0, 0, 1, 0 },
-                              { 0, 0, 1, 0 },
-                              { 1, 0, 0, 0 },
-                              { 0, 0, 1, 0 } };
+    static int[][] matrix = { { 0, 1, 1, 0 },
+                              { 0, 0, 0, 0 },
+                              { 0, 1, 0, 0 },
+                              { 0, 1, 0, 0 } };
     static boolean knows(int A, int B)
     {
         if(matrix[A][B] == 1)
@@ -54,7 +54,7 @@ public class CelebrityProblem {
         int C = stack.pop();
         for(int i=0;i<n;i++)
         {
-            if(i != C && knows(C,i) || !knows(i,C))
+            if(i != C && (knows(C,i) || !knows(i,C)))
                 return -1;
         }
 
