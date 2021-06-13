@@ -1,4 +1,4 @@
-package LinearDS;
+package LinkedLists;
 
 public class Split_the_CLL {
     Node head;

@@ -1,3 +1,5 @@
+package Queues;
+
 public class Queue_with_linkedList {
     // Linkedlist Node
     Node head;
@@ -10,7 +12,7 @@ public class Queue_with_linkedList {
             next = null;
         }
     }
-    // Function to add elements in end of Queue
+    // Function to add elements in end of Queues.Queue
     public void append(int new_data)
     {
         Node new_node = new Node(new_data);
@@ -28,7 +30,7 @@ public class Queue_with_linkedList {
         last.next = new_node;
         return;
     }
-    // Function to traverse the Queue
+    // Function to traverse the Queues.Queue
     public void show_list()
     {
         Node n = head;

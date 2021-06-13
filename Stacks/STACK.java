@@ -1,3 +1,5 @@
+package Stacks;
+
 class stack1{
     int size = 10;
     int stack[] = new int[size];
@@ -9,7 +11,7 @@ class stack1{
             stack[top] = item;
             System.out.println("Item pushed:" + item);
         } else {
-            System.out.println("Stack is overflowing!!");
+            System.out.println("Stacks.Stack is overflowing!!");
         }
     }
 
@@ -19,7 +21,7 @@ class stack1{
             top--;
             System.out.println("Item Popped:" + item);
         } else {
-            System.out.println("Stack is Underflowing");
+            System.out.println("Stacks.Stack is Underflowing");
         }
     }
 
@@ -29,7 +31,7 @@ class stack1{
         }
     }
 }
-public class Stack {
+public class STACK {
     public static void main(String args[]) {
         stack1 s = new stack1();
         s.push(99);

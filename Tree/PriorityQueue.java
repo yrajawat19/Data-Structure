@@ -120,7 +120,7 @@ public class PriorityQueue {
         q.insert(11);
         q.insert(13);
         q.insert(7);
-        System.out.println("Priority Queue :");
+        System.out.println("Priority Queues.Queue :");
         q.print();
         System.out.println();
         System.out.println("Element with maximum priority : "+q.getMax());

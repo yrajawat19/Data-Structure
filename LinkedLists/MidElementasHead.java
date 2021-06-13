@@ -1,4 +1,4 @@
-package LinearDS;
+package LinkedLists;
 
 public class MidElementasHead {
     Node head;

@@ -1,18 +1,20 @@
+package Queues;
+
 class QueueDST{
     int size = 5; //Size
-    int queue[]=new int[size]; //Queue declaration as an array of size 5
+    int queue[]=new int[size]; //Queues.Queue declaration as an array of size 5
     int front = 0; // front set to 0
     int rear = -1; // rear set to -1
     void Enqueue(int item) //Enqueue Function
     {
-        if(rear<=size)  // If condition that rear should be smaller than Queue size
+        if(rear<=size)  // If condition that rear should be smaller than Queues.Queue size
         {
             rear++; //rear increment
             queue[rear]=item;
             System.out.println("Item Enqueued:"+item);
         }
         else{
-            System.out.println("Queue Overflow !!");
+            System.out.println("Queues.Queue Overflow !!");
         }
     }
     void Dequeue() // Dequeue Function
@@ -24,14 +26,14 @@ class QueueDST{
            System.out.println("Item Dequeued:"+item);
         }
         else{
-            System.out.println("Queue Underflow!!");
+            System.out.println("Queues.Queue Underflow!!");
         }
     }
-    void Traverse()  //Queue Traversal Function
+    void Traverse()  //Queues.Queue Traversal Function
     {
         for(int i=front;i<=rear;i++)
         {
-            System.out.println("Item in Queue:"+queue[i]);
+            System.out.println("Item in Queues.Queue:"+queue[i]);
         }
     }
 }
@@ -45,14 +47,14 @@ public class Queue {
         q.Enqueue(17);
         q.Enqueue(13);
         q.Traverse();
-        q.Dequeue(); // Queue first element deletion
+        q.Dequeue(); // Queues.Queue first element deletion
         q.Traverse(); // Traversal after first Dequeue
         q.Dequeue();
         q.Dequeue();
         q.Dequeue();
         q.Dequeue();
-        q.Dequeue(); //Queue Underflow Situation
-        q.Traverse(); //Prints nothing as Queue is empty
+        q.Dequeue(); //Queues.Queue Underflow Situation
+        q.Traverse(); //Prints nothing as Queues.Queue is empty
 
 
     }

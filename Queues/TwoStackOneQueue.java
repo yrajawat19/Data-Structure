@@ -1,3 +1,5 @@
+package Queues;
+
 class TwoStack{
     int size=5;
     int InputStack[]=new int[size];
@@ -39,7 +41,7 @@ class TwoStack{
     {
         for (int i=outFront;i>-1;i--)
         {
-            System.out.println("Item in Queue:"+OutputStack[i]);
+            System.out.println("Item in Queues.Queue:"+OutputStack[i]);
         }
     }
 }

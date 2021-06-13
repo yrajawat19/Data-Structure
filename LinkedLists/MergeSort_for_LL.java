@@ -1,4 +1,4 @@
-package LinearDS;
+package LinkedLists;
 class LinkedList
 {
     Node head;

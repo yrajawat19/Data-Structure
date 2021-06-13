@@ -1,3 +1,5 @@
+package Stacks;
+
 class stack{
     int size =10;
     int Arr[]=new int[size];
@@ -8,10 +10,10 @@ class stack{
         {
             top1++;
             Arr[top1]=data;
-            System.out.print("\nItem pushed in Stack 1:"+data);
+            System.out.print("\nItem pushed in Stacks.Stack 1:"+data);
         }
         else{
-            System.out.println("\nStack Overflow!!");
+            System.out.println("\nStacks.Stack Overflow!!");
         }
     }
     void stack_push2(int data)
@@ -20,10 +22,10 @@ class stack{
     {
         top2--;
         Arr[top2] = data;
-        System.out.println("\nItem pushed in Stack 2:"+data);
+        System.out.println("\nItem pushed in Stacks.Stack 2:"+data);
     }
         else{
-            System.out.println("\nStack Overflow !!");
+            System.out.println("\nStacks.Stack Overflow !!");
         }
     }
     void stack_pop1(){
@@ -35,7 +37,7 @@ class stack{
             System.out.println("\nPop item :"+item);
         }
         else{
-            System.out.println("\nStack Underflow");
+            System.out.println("\nStacks.Stack Underflow");
         }
     }
     void stack_pop2(){
@@ -47,21 +49,21 @@ class stack{
             System.out.println("\nPop item :"+item);
         }
         else{
-            System.out.println("\nStack Underflow");
+            System.out.println("\nStacks.Stack Underflow");
         }
     }
     void stack_show1()
     {
         for(int i=top1;i>=0;--i)
         {
-            System.out.println("\nElement in Stack 1:"+Arr[i]);
+            System.out.println("\nElement in Stacks.Stack 1:"+Arr[i]);
         }
     }
     void stack_show2()
     {
         for(int i=top2;i<size;++i)
         {
-            System.out.println("\nElement in Stack 2:"+Arr[i]);
+            System.out.println("\nElement in Stacks.Stack 2:"+Arr[i]);
         }
     }
 }

@@ -1,3 +1,5 @@
+package Queues;
+
 class queue{
     int size = 10; // Size initalized to 10
     int Arr[] = new int[size]; // Array is initialized with size 10
@@ -9,10 +11,10 @@ class queue{
         {
             queue_rear1++;
             Arr[queue_rear1]=item;
-            System.out.println("Item Enqueued in Queue 1:"+item);
+            System.out.println("Item Enqueued in Queues.Queue 1:"+item);
         }
         else{
-            System.out.println("Queue Overflow");
+            System.out.println("Queues.Queue Overflow");
         }
     }
     void Enqueue2(int item)
@@ -21,10 +23,10 @@ class queue{
         {
             queue_rear2--;
             Arr[queue_rear2]=item;
-            System.out.println("Item Enqueued in Queue 2:"+item);
+            System.out.println("Item Enqueued in Queues.Queue 2:"+item);
         }
         else{
-            System.out.println("Queue Overflow");
+            System.out.println("Queues.Queue Overflow");
         }
     }
     void Dequeue1()
@@ -33,10 +35,10 @@ class queue{
         {
             int item = Arr[queue_front1];
             queue_front1++;
-            System.out.println("Item Dequeued in Queue 1 :"+item);
+            System.out.println("Item Dequeued in Queues.Queue 1 :"+item);
         }
         else{
-            System.out.println("First Queue Underflow!!");
+            System.out.println("First Queues.Queue Underflow!!");
         }
     }
     void Dequeue2()
@@ -45,10 +47,10 @@ class queue{
         {
             int item = Arr[queue_front2];
             queue_front2--;
-            System.out.println("Item Dequeued in Queue 2 :"+item);
+            System.out.println("Item Dequeued in Queues.Queue 2 :"+item);
         }
         else{
-            System.out.println("Second Queue Underflow!!");
+            System.out.println("Second Queues.Queue Underflow!!");
         }
     }
 
@@ -56,14 +58,14 @@ class queue{
     {
         for(int i=queue_front1;i<=queue_rear1;i++)
         {
-            System.out.println("Element in Queue 1:"+Arr[i]);
+            System.out.println("Element in Queues.Queue 1:"+Arr[i]);
         }
     }
     void Show_Q2()
     {
         for(int i=queue_front2;i>=queue_rear2;i--)
         {
-            System.out.println("Element in Queue 2:"+Arr[i]);
+            System.out.println("Element in Queues.Queue 2:"+Arr[i]);
         }
     }
 }

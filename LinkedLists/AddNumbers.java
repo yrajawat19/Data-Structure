@@ -1,4 +1,4 @@
-package LinearDS;
+package LinkedLists;
 
 public class AddNumbers {
     Node head;

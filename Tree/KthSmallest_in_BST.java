@@ -1,4 +1,4 @@
-/* A simple inorder traversal based java program to find Kth smallest number in Binary search tree .*/
+package Tree;/* A simple inorder traversal based java program to find Kth smallest number in Binary search tree .*/
 import java.io.*;
 import java.util.Scanner;
 

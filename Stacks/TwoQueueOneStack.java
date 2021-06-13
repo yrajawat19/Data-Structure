@@ -1,3 +1,5 @@
+package Stacks;
+
 class TwoQueues{
     int size =5;
     int queue1[]=new int[size];
@@ -16,7 +18,7 @@ class TwoQueues{
             System.out.println("Item Inserted :"+item);
         }
         else{
-            System.out.println("Overflow Condition  in Queue 1!!");
+            System.out.println("Overflow Condition  in Queues.Queue 1!!");
         }
     }
     void Enqueue2()
@@ -34,14 +36,14 @@ class TwoQueues{
         }
         else
         {
-            System.out.println("Overflow in Queue 2!!");
+            System.out.println("Overflow in Queues.Queue 2!!");
         }
     }
     void Traversal()
     {
         for(int i=queue2_front;i<size;i++)
         {
-            System.out.println("Item in Stack:"+queue2[i]);
+            System.out.println("Item in Stacks.Stack:"+queue2[i]);
         }
     }
 

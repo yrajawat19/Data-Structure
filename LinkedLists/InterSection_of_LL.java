@@ -1,4 +1,4 @@
-package LinearDS;
+package LinkedLists;
 
 import java.util.*;
 

@@ -36,7 +36,7 @@ public class RottenOranges {
 
     private static int rotOranges(int[][] grid)
     {
-        Queue<ele> q = new LinkedList<>(); // Queue to track record of all rotten oranges in grid .
+        Queue<ele> q = new LinkedList<>(); // Queues.Queue to track record of all rotten oranges in grid .
         int ans = 0;
         ele temp;
         int fresh = 0;

@@ -1,3 +1,5 @@
+package Stacks;
+
 public class Stack_as_linkedlist
 {
     Node head;
@@ -22,7 +24,7 @@ public class Stack_as_linkedlist
     {
         if(head == null)
         {
-            System.out.println("Stack underflow !!");
+            System.out.println("Stacks.Stack underflow !!");
         }
         Node temp;
         System.out.println(head.data+" Popped .");

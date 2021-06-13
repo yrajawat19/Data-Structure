@@ -1,5 +1,5 @@
 /* Java Program to remove duplicates from unsorted list */
-package LinearDS;
+package LinkedLists;
 import java.util.HashSet;
 
 public class RemoveDuplicates_from_SLL {
