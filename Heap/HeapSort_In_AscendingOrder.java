@@ -1,4 +1,4 @@
-package Tree;
+package Heap;
 import java.util.*;
 class heapSort
 {

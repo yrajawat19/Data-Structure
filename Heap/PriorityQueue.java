@@ -1,4 +1,4 @@
-package Tree;
+package Heap;
 class BinaryHeap
 {
     int maxSize;

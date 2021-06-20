@@ -1,4 +1,4 @@
-package Tree;
+package Heap;
 public class MinHeap {
     int maxsize;
     int size;

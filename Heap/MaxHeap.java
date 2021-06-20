@@ -1,4 +1,4 @@
-package Tree;
+package Heap;
 public class MaxHeap {
     int maxsize ; // Maximum size of heap .
     int size; // current size of heap .

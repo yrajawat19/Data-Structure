@@ -1,5 +1,5 @@
-package Tree;
-import java.util.*;
+package Heap;
+
 class HeapsortDESC
 {
     // This method returns leftchild position for given position .
