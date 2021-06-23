@@ -10,8 +10,8 @@ package Algorithms.DP;
 
 public class LongestCommonSubSequence {
     public static void main(String[] args) {
-        String s1 = "ABCDE"; // String 1
-        String s2 = "AB"; // String 2
+        String s1 = "ACEFGHIJDB"; // String 1
+        String s2 = "ADBCE"; // String 2
         char[] A = s1.toCharArray(); // String to char Array conversion of s1
         char[] B = s2.toCharArray(); // String to char Array conversion of s2
         int m = A.length; // m = length of char Array A
