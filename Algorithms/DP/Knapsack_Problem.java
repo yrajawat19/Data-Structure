@@ -1,30 +1,27 @@
 package Algorithms.DP;
-
 public class Knapsack_Problem {
-    static int knapSack(int[] val,int[] wt,int n,int W)
-    {
-        int K[][] = new int[n+1][W+1];
-        int i,w;
-        for(i=0;i<=n;i++)
-        {
-            for(w=0;w<=W;w++)
-            {
-                if(i == 0 || w == 0)
-                    K[i][w] = 0;
-                else if(wt[i-1] <= w)
-                    K[i][w] = Math.max(K[i-1][w],K[i-1][w-wt[i-1]]+val[i-1]);
+    // Function to calculate maximum profit in 0-1 knapsack problem .
+    public static int knapsack(int[] wt , int[] profit , int W , int n) {
+        int[][] table = new int[n+1][W+1];
+
+        for(int i = 0 ; i <= n ; i++) {
+            for(int j = 0 ; j <=W;j++) {
+                // Base case : when we don't have any items or knapsack bag is full .
+                if(i == 0 || j == 0)
+                    table[i][j] = 0;
+                else if(wt[i-1] > j)
+                    table[i][j] = table[i-1][j];
                 else
-                    K[i][w] = K[i-1][w];
+                    table[i][j] = Math.max(table[i-1][j],table[i-1][j-wt[i-1]]+profit[i-1]);
             }
         }
-        return K[n][W];
+        return table[n][W];
     }
+    // Driver code
     public static void main(String[] args) {
-        int[] val ={10,6,8};
-        int[] wt = {2,3,5};
-        int n = val.length;
-        int W = 10;
-        int maxProfit = knapSack(val,wt,n,W);
-        System.out.println("Maximum Profit : "+maxProfit);
+        int wt[] = {10, 20, 30 };
+        int profit[] = {60, 100, 120 };
+        int W = 50;
+        System.out.println("Maximum profit in knapsack is "+knapsack(wt,profit,W,wt.length));
     }
 }

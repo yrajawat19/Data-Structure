@@ -10,36 +10,30 @@ package Algorithms.DP;
 
 public class LongestCommonSubSequence {
     public static void main(String[] args) {
-        String s1 = "ACEFGHIJDB"; // String 1
-        String s2 = "ADBCE"; // String 2
+        String s1 = "AAAABBAA"; // String 1
+        String s2 = "AABB"; // String 2
         char[] A = s1.toCharArray(); // String to char Array conversion of s1
         char[] B = s2.toCharArray(); // String to char Array conversion of s2
         int m = A.length; // m = length of char Array A
         int n = B.length; // n = length of char Array B
-        char C[] = lcs(A,B,m,n); // result stores length of subsequence
-        System.out.println("common subsequence of both array : "); // prints the result
-        for(int i=0;i<C.length;i++)
-            System.out.print(C[i]);
-        System.out.println();
-        System.out.println("Length of common subsequence is "+C.length);
+        int C = lcs(A,B,m,n); // result stores length of subsequence
+        System.out.println("Length of common subsequence is "+C);
     }
 
-    private static char[] lcs(char[] a, char[] b, int m, int n) {
+    private static int lcs(char[] a, char[] b, int m, int n) {
         int[][] L = new int[m+1][n+1]; // matrix
-        char[] c = new char[n]; // size of char array C will be same as string 2 array .
-        int k =0;
+
         for(int i=0;i<=m;i++) {
             for(int j=0;j<=n;j++) {
                 if( i==0 || j==0)
                     L[i][j] = 0;
                 else if(a[i-1]==b[j-1]) {
                     L[i][j] = L[i - 1][j - 1] + 1;
-                    c[k++] = b[j-1];
                 }
                 else
                     L[i][j] = Math.max(L[i-1][j],L[i][j-1]);
             }
         }
-        return c;
+        return L[m][n];
     }
 }

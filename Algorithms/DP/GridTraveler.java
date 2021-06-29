@@ -23,9 +23,9 @@ public class GridTraveler {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter rows length in grid :");
+        System.out.print("Enter rows length in grid :");
         int rows = sc.nextInt();
-        System.out.println("Enter columns length in grid :");
+        System.out.print("Enter columns length in grid :");
         int columns = sc.nextInt();
         System.out.println(countPaths(rows,columns));
     }
