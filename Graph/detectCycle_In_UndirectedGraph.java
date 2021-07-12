@@ -30,10 +30,11 @@ class UndirectedGraph
     boolean isCyclic()
     {
         boolean visited[] = new boolean[V];
-        for(int i=0;i<V;i++)
-            if(!visited[i])
-                if(isCyclicUtil(i,visited,-1))
+        for(int i=0;i<V;i++) {
+            if (!visited[i])
+                if (isCyclicUtil(i, visited, -1))
                     return true;
+        }
         return false;
 
     }
