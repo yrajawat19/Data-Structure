@@ -51,8 +51,7 @@ public class HeapSort_In_AscendingOrder
 {
     public static void main (String[] args) {
         heapSort h = new heapSort();
-        Scanner sc = new Scanner(System.in);
-        int arr[] = new int[10];
+        int[] arr = {12,35,56,2,6,4,3,8,5,9,13,15,16,191};
         h.heapsort(arr);
         System.out.println("Sorted array :");
         h.print(arr);
