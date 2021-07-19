@@ -55,7 +55,7 @@ public class TreeIsomorphicProblem {
         if(n1.key != n2.key)
             return false;
 
-        return (Isomorphic(n1.left,n2.left) && Isomorphic(n2.left,n2.right)) || (Isomorphic(n1.left,n2.right) && Isomorphic(n1.right,n2.left));
+        return (Isomorphic(n1.left,n2.left) && Isomorphic(n1.right,n2.right)) || (Isomorphic(n1.left,n2.right) && Isomorphic(n1.right,n2.left));
     }
 
     // Driver Function
